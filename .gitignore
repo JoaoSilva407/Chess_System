@@ -26,7 +26,7 @@
 *.class
 *.nar
 
-# NetBeans specific
+### NetBeans ###
 **/nbproject/private/
 **/nbproject/Makefile-*.mk
 **/nbproject/Package-*.bash
