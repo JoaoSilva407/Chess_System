@@ -27,10 +27,8 @@
 *.nar
 
 ### NetBeans ###
-**/nbproject/private/
-**/nbproject/Makefile-*.mk
-**/nbproject/Package-*.bash
-build/
+nbproject
+build
 nbbuild/
 dist/
 nbdist/
