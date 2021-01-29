@@ -1,12 +1,14 @@
-#
-# Project specific excludes
-#
+# Compiled class file
+*.class
 
-tomcat
+# Log file
+*.log
 
-#
-# Default excludes
-#
+# BlueJ files
+*.ctxt
+
+#Mobile Tools for Java(J2ME)
+.mtj.tmp/
 
 # Binaries
 *.7z
@@ -24,26 +26,15 @@ tomcat
 *.class
 *.nar
 
-# Maven 
-target/
-
-# Compiled class file
-*.class
-
-# Log file
-*.log
-
-# BlueJ files
-*.ctxt
-
 # NetBeans specific
-.nbproject/
-.build/
-.nbbuild/
-.dist/
-.nbdist/
-.nbactions.xml
-.nb-configuration.xml
+**/nbproject/private/
+**/nbproject/Makefile-*.mk
+**/nbproject/Package-*.bash
+build/
+nbbuild/
+dist/
+nbdist/
+.nb-gradle/
 
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
