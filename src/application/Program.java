@@ -29,7 +29,7 @@ public class Program {
 		ChessPosition source = UI.readChessPosition(input);
 				
 		boolean[][] possibleMoves = chessMatch.possibleMoves(source);
-		UI.printBoard(chessMatch.getPieces(), possibleMoves);
+                UI.printBoard(chessMatch.getPieces(), possibleMoves);
 		System.out.println();
 		System.out.print("Target: ");
 		ChessPosition target = UI.readChessPosition(input);
@@ -39,6 +39,16 @@ public class Program {
 		if (capturedPiece != null) {
                     captured.add(capturedPiece);
 		}
+                
+                if(chessMatch.getPromoted() != null) {
+                    System.out.print("Enter piece for promotion (B/N/R/Q): ");
+                    String type = input.nextLine().toUpperCase();
+                    while(!type.equals("B") && !type.equals("N") && !type.equals("R") && !type.equals("Q")) {
+                        System.out.print("Invalid value! Enter piece for promotion (B/N/R/Q): ");
+                        type = input.nextLine().toUpperCase();
+                    }
+                    chessMatch.replacePromotedPiece(type);
+                }
             }
             catch (ChessException e) {
 		System.out.println(e.getMessage());
